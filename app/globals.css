@@ -41,8 +41,8 @@ body {
 
 /* Navbar */
 .next-section.header {
-  height: 80px;
-  padding-block: 0px;
+  height: 100px;
+  padding-block: 12px;
   position: fixed;
   top: 0;
 }
@@ -52,6 +52,17 @@ body {
   justify-content: space-between;
 }
 
+.next-wrapper.bg-color {
+  background: #212121;
+  color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.navbar-logo-ctn {
+  padding-inline: 12px;
+}
+
 .navbar-logo {
   width: 100%;
   height: 100%;
@@ -59,9 +70,38 @@ body {
   object-position: center;
 }
 
+.navbar-menu-ctn {
+  padding-inline: 12px;
+}
+
 .navbar-menu-ctn ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 32px;
+}
+
+.navbar-menu-ctn ul li {
+  padding: 8px 16px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navbar-menu-ctn ul li::before {
+  content: '';
+  width: 0px;
+  height: 1px;
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.navbar-menu-ctn ul li.current-page::before {
+  width: calc(100% - 32px);
+}
+
+.navbar-menu-ctn ul li:hover::before {
+  width: calc(100% - 32px);
 }

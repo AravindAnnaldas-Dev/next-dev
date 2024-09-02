@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import '../globals.css';
 
 const Products = () => {
   return (
-    <div>Products</div>
-  )
-}
+    <div className="next-section">
+      <div className="next-container">
+        <div className="next-wrapper">Products</div>
+      </div>
+    </div>
+  );
+};
 
-export default Products
+export default Products;
